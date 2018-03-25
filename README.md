@@ -2,20 +2,16 @@
 A ecmascript implementation of the nodejs buffer object to be used in the browser. Right now only read functions are implemented, but more functionality maybe added over time.
 
 ```
-      var reader = new FileReader();
-      
-      reader.onload = function (e) {
+var reader = new FileReader();
+reader.onload = function (e) {
 
-				var array_buffer = e.target.result;
-				var uint8array = new Uint8Array(array_buffer);
-        var buffer = new Buffer(uint8array);
+	var array_buffer = e.target.result;
+	var uint8array = new Uint8Array(array_buffer);
+	var buffer = new Buffer(uint8array);
 
-			}
-
-			reader.readAsArrayBuffer(file);
-
+}
+reader.readAsArrayBuffer(file);
 ```
-
 
 buf.readFloatBE(offset)
 buf.readFloatLE(offset)
